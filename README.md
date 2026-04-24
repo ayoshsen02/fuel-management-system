@@ -1,4 +1,4 @@
-# 🇮🇳 AI-Powered Smart Fuel Management System
+# Smart Fuel Management System
 
 > A complete, production-grade Data Science project for Indian fleet fuel analytics.
 > Built with Python · XGBoost · Prophet · Isolation Forest · Streamlit
