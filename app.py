@@ -56,6 +56,12 @@ st.markdown("""
 BASE_DIR  = Path(__file__).parent
 MODEL_DIR = BASE_DIR / "models"
 
+# ─── Auto-setup: run all models on first launch (Streamlit Cloud) ─────────────
+from setup import run_all_setup
+with st.spinner("⚙️ First-time setup: training models, please wait ~1 min..."):
+    run_all_setup()
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 #  HELPERS
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -131,7 +137,7 @@ if df.empty:
 # ═══════════════════════════════════════════════════════════════════════════════
 #  MAIN HEADER
 # ═══════════════════════════════════════════════════════════════════════════════
-st.title("Smart Fuel Management System")
+st.title("🇮🇳 AI-Powered Smart Fuel Management System")
 st.caption(f"Data: {df['Date'].min().date()} → {df['Date'].max().date()}  |  "
            f"{len(df):,} records  |  {df['Vehicle_ID'].nunique()} vehicles")
 st.divider()
